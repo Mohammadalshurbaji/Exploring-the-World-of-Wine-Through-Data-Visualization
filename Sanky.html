@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sankey Chart</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+  </head>
+
+  <body>
+    <div id="sankey-chart"></div>
+    <a href="website.html"
+      ><button class="dv1"><span id="dv1">Home Page</span></button></a
+    >
+
+    <script>
+      // Your data (replace with your dataset)
+      const data = [
+        {
+          variety: "Chardonnay",
+          winery: "Winery A",
+          title: "Wine 1",
+        },
+        {
+          variety: "Cabernet Sauvignon",
+          winery: "Winery B",
+          title: "Wine 2",
+        },
+        // More data entries...
+      ];
+
+      // Initialize the SVG canvas dimensions
+      const width = 800;
+      const height = 400;
+
+      // Append an SVG container to the specified element
+      const svg = d3
+        .select("#sankey-chart")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+      // Create a Sankey generator
+      const sankey = d3
+        .sankey()
+        .nodeWidth(15)
+        .nodePadding(10)
+        .size([width, height]);
+
+      const { nodes, links } = sankey({
+        nodes: [
+          ...new Set(data.map((d) => d.variety)),
+          ...new Set(data.map((d) => d.winery)),
+        ],
+        links: data.map((d) => ({
+          source: d.variety,
+          target: d.winery,
+          value: 1, // You may need to aggregate this if multiple wines have the same variety and winery.
+        })),
+      });
+
+      // Create color scales for nodes
+      const varietyColor = d3.scaleOrdinal(d3.schemeCategory10);
+      const wineryColor = d3.scaleOrdinal(d3.schemeCategory20);
+
+      // Create the links
+      svg
+        .append("g")
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("d", d3.sankeyLinkHorizontal())
+        .attr("stroke", "lightgray")
+        .attr("stroke-width", (d) => Math.max(1, d.width))
+        .attr("fill", "none");
+
+      // Create the nodes
+      svg
+        .append("g")
+        .selectAll("rect")
+        .data(nodes)
+        .join("rect")
+        .attr("x", (d) => d.x0)
+        .attr("y", (d) => d.y0)
+        .attr("height", (d) => d.y1 - d.y0)
+        .attr("width", (d) => d.x1 - d.x0)
+        .attr("fill", (d) =>
+          d.source === "variety" ? varietyColor(d.name) : wineryColor(d.name)
+        )
+        .append("title")
+        .text((d) => `${d.name}\n${d.value} wines`);
+
+      // Add labels for nodes
+      svg
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("x", (d) => (d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6))
+        .attr("y", (d) => (d.y1 + d.y0) / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", (d) => (d.x0 < width / 2 ? "start" : "end"))
+        .text((d) => d.name);
+    </script>
+  </body>
+</html>
