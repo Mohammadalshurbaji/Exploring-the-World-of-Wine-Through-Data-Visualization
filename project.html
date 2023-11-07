@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+    <style>
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 8px;
+            font: 12px sans-serif;
+            background: white;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .svg-container {
+            display: inline-block;
+            margin: 10px; /* Adjust as needed */
+        }
+
+        .chart-container {
+            display: flex; /* Make the container a flex container */
+        }
+
+        .sankey-container {
+            flex: 1; /* Share half of the container width */
+        }
+
+        .scatterplot-container {
+            flex: 1; /* Share half of the container width */
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>CPSC 6030 Project Proposal - Winery Dataset</h1>
+    </div>
+
+    <h1>World Map</h1>
+    <div class="svg-container">
+        <svg id="map" height="500"></svg>
+    </div>
+    <script src="heatmap.js"></script>
+    <div class="tooltip"></div>
+
+    <div class="chart-container">
+        <div class="sankey-container">
+            <h2>Sankey Chart</h2>
+            <svg id="sankey_chart" style="width:800; height:600"></svg>
+            <script src="sankey_chart.js"></script>
+        </div>
+        <div class="scatterplot-container">
+            <h2>Scatter plot</h2>
+            <svg id="scatterplot"></svg>
+            <script src="scatterplot.js"></script>
+        </div>
+    </div>
+</body>
+</html>
