@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+    <title>Variety TreeMap</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<h1>Wine Reviews Along the California State</h1>
+<!-- <p class="intro">
+    In this website, a list of the main comparison factors that shows the difference between wine varieties in producing wine along California will be visualized in detail.
+    <br />
+</p> -->
+
+<div class="main-container">
+    <div class="main-container2">
+        <div class="chart-container">
+            <div>
+
+                <h3 id="h3">Varieties of Wines </h3>
+                <svg id="treemap" height="250" width="600"></svg>
+                <rect class="rect1" x="5" y="5" width="800" height="500" fill="black"></rect>
+                <script src="treemap.js"></script>
+
+
+            </div>
+            <div>
+                
+                <h3 id="h3">Number of Wines per Each Winery</h3>
+                <svg id="barchart"></svg>
+                <script src="barchart.js"></script>
+            </div>
+        </div>
+        <div class="chart-container">
+        <div>
+            <h3 id="prices"> Prices VS. Points</h3>
+            <svg id="scatterplot"></svg>
+            <script src="scatterplot.js"></script>
+
+         </div>
+         <div style="display: flex; justify-content: center; align-items: center;">
+            <svg id="donutchart" height="300" width="600"></svg>
+            <script src="donutchart.js"></script>
+         </div>
+        </div>
+    </div>
+    <div class="Box-container">
+
+        <div class="button-box">
+            <a href="scatterplot.html"><button class="dv1" ><span id="dv11"> Prices VS. Points</span></button></a>
+            <a href="barchart.html"><button class="dv2"><span id="dv22">Number of Wines</span></button></a>
+            <a href="treemap.html"><button class="dv3"><span id="dv33">Varieties of Wines</span></button></a>
+            <a href="https://github.com/sumanthnangineedi97/CPSC6030_Project" target="_blank"><button class="gh">Git Hub</button>.<br></Project
+        ></a>
+        </div>
+        <div class="button-box">
+            <!--- <h2>Introduction</h2> 
+            <p>Hello World</p>-->
+            <h2>Instructions</h2>
+            <p>Three charts are figured out to show you different aspects of Wine Varieties in California State:
+                <p>- The Varieties of Wine in California are shown in the Tree Map, and it's our filter for this website. </p>
+                <p>- The top 10 wineries that produce a certain variety are shown in the Bar Chart.</p>
+                <p>- The Price-Points relationship for each variety is shwon in the Scatter Plot.</p>
+
+            </p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<body>
+
+</body>
+
+</html>
