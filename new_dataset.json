@@ -2,664 +2,100 @@
   "name": "Variety TreeMap",
   "children": [
     {
-      "name": "Abouriou",
-      "value": 1
-    },
-    {
-      "name": "Aglianico",
-      "value": 14
-    },
-    {
-      "name": "Albari\u00f1o",
-      "value": 61
-    },
-    {
-      "name": "Alicante Bouschet",
-      "value": 5
-    },
-    {
-      "name": "Aligot\u00e9",
-      "value": 1
-    },
-    {
-      "name": "Alvarelh\u00e3o",
-      "value": 1
-    },
-    {
-      "name": "Alvarinho",
-      "value": 1
-    },
-    {
-      "name": "Arneis",
-      "value": 8
-    },
-    {
-      "name": "Barbera",
-      "value": 140
-    },
-    {
-      "name": "Black Muscat",
-      "value": 3
-    },
-    {
-      "name": "Blaufr\u00e4nkisch",
-      "value": 2
-    },
-    {
-      "name": "Bordeaux-style Red Blend",
-      "value": 372
-    },
-    {
-      "name": "Bordeaux-style White Blend",
-      "value": 4
-    },
-    {
-      "name": "Cabernet Blend",
-      "value": 11
-    },
-    {
-      "name": "Cabernet Franc",
-      "value": 190
-    },
-    {
-      "name": "Cabernet Franc-Merlot",
-      "value": 5
-    },
-    {
-      "name": "Cabernet Merlot",
-      "value": 2
-    },
-    {
-      "name": "Cabernet Pfeffer",
-      "value": 1
-    },
-    {
-      "name": "Cabernet Sauvignon",
-      "value": 2424
-    },
-    {
-      "name": "Cabernet Sauvignon-Cabernet Franc",
-      "value": 3
-    },
-    {
-      "name": "Cabernet Sauvignon-Malbec",
-      "value": 1
-    },
-    {
-      "name": "Cabernet Sauvignon-Merlot",
-      "value": 10
-    },
-    {
-      "name": "Cabernet Sauvignon-Sangiovese",
-      "value": 2
-    },
-    {
-      "name": "Cabernet Sauvignon-Syrah",
-      "value": 17
-    },
-    {
-      "name": "Cabernet Sauvignon-Tempranillo",
-      "value": 1
-    },
-    {
-      "name": "Cabernet-Shiraz",
-      "value": 1
-    },
-    {
-      "name": "Carignan",
-      "value": 5
-    },
-    {
-      "name": "Carignane",
-      "value": 24
-    },
-    {
-      "name": "Carmen\u00e8re",
-      "value": 3
-    },
-    {
-      "name": "Champagne Blend",
-      "value": 6
-    },
-    {
-      "name": "Charbono",
-      "value": 16
-    },
-    {
-      "name": "Chardonnay",
-      "value": 2469
-    },
-    {
-      "name": "Chardonnay-Semillon",
-      "value": 3
-    },
-    {
-      "name": "Chardonnay-Viognier",
-      "value": 2
-    },
-    {
-      "name": "Chenin Blanc",
-      "value": 52
-    },
-    {
-      "name": "Chenin Blanc-Viognier",
-      "value": 7
-    },
-    {
-      "name": "Cinsault",
-      "value": 15
-    },
-    {
-      "name": "Clairette",
-      "value": 1
-    },
-    {
-      "name": "Claret",
-      "value": 13
-    },
-    {
-      "name": "Colombard",
-      "value": 9
-    },
-    {
-      "name": "Counoise",
-      "value": 2
-    },
-    {
-      "name": "Dolcetto",
-      "value": 12
-    },
-    {
-      "name": "Dornfelder",
-      "value": 4
-    },
-    {
-      "name": "Edelzwicker",
-      "value": 1
-    },
-    {
-      "name": "Falanghina",
-      "value": 2
-    },
-    {
-      "name": "Fiano",
-      "value": 6
-    },
-    {
-      "name": "Fum\u00e9 Blanc",
-      "value": 22
-    },
-    {
-      "name": "G-S-M",
-      "value": 66
-    },
-    {
-      "name": "Garnacha",
-      "value": 5
-    },
-    {
-      "name": "Gew\u00fcrztraminer",
-      "value": 68
-    },
-    {
-      "name": "Gr\u00fcner Veltliner",
-      "value": 17
-    },
-    {
-      "name": "Graciano",
-      "value": 10
-    },
-    {
-      "name": "Grenache",
-      "value": 239
-    },
-    {
-      "name": "Grenache Blanc",
-      "value": 64
-    },
-    {
-      "name": "Grenache Blend",
-      "value": 3
-    },
-    {
-      "name": "Grenache Noir",
-      "value": 2
-    },
-    {
-      "name": "Grenache-Mourv\u00e8dre",
-      "value": 2
-    },
-    {
-      "name": "Grenache-Syrah",
-      "value": 17
-    },
-    {
-      "name": "Kerner",
-      "value": 1
-    },
-    {
-      "name": "Lagrein",
-      "value": 3
-    },
-    {
-      "name": "Malbec",
-      "value": 125
-    },
-    {
-      "name": "Malvasia Bianca",
-      "value": 6
-    },
-    {
-      "name": "Marsanne",
-      "value": 14
-    },
-    {
-      "name": "Marsanne-Roussanne",
-      "value": 3
-    },
-    {
-      "name": "Meritage",
-      "value": 78
-    },
-    {
-      "name": "Merlot",
-      "value": 502
-    },
-    {
-      "name": "Merlot-Cabernet",
-      "value": 1
-    },
-    {
-      "name": "Merlot-Cabernet Franc",
-      "value": 1
-    },
-    {
-      "name": "Merlot-Cabernet Sauvignon",
-      "value": 6
-    },
-    {
-      "name": "Mission",
-      "value": 6
-    },
-    {
-      "name": "Monastrell",
-      "value": 4
-    },
-    {
-      "name": "Montepulciano",
-      "value": 11
-    },
-    {
-      "name": "Moscato",
-      "value": 39
-    },
-    {
-      "name": "Moscato Giallo",
-      "value": 1
-    },
-    {
-      "name": "Mourv\u00e8dre",
-      "value": 85
-    },
-    {
-      "name": "Mourv\u00e8dre-Syrah",
-      "value": 1
-    },
-    {
-      "name": "Muscadine",
-      "value": 2
-    },
-    {
-      "name": "Muscat",
-      "value": 9
-    },
-    {
-      "name": "Muscat Blanc",
-      "value": 6
-    },
-    {
-      "name": "Muscat Blanc \u00e0 Petits Grains",
-      "value": 1
-    },
-    {
-      "name": "Muscat Canelli",
-      "value": 14
-    },
-    {
-      "name": "Muscat d'Alexandrie",
-      "value": 1
-    },
-    {
-      "name": "Muscat Hamburg",
-      "value": 2
-    },
-    {
-      "name": "Muskat",
-      "value": 1
-    },
-    {
-      "name": "Nebbiolo",
-      "value": 22
-    },
-    {
-      "name": "Negrette",
-      "value": 1
-    },
-    {
-      "name": "Negroamaro",
-      "value": 1
-    },
-    {
-      "name": "Nero d'Avola",
-      "value": 2
-    },
-    {
-      "name": "Orange Muscat",
-      "value": 7
-    },
-    {
-      "name": "Palomino",
-      "value": 1
-    },
-    {
-      "name": "Petit Verdot",
-      "value": 64
-    },
-    {
-      "name": "Petite Sirah",
-      "value": 371
-    },
-    {
-      "name": "Petite Verdot",
-      "value": 2
-    },
-    {
-      "name": "Picpoul",
-      "value": 5
-    },
-    {
-      "name": "Pinot Blanc",
-      "value": 29
-    },
-    {
-      "name": "Pinot Blanc-Viognier",
-      "value": 1
-    },
-    {
-      "name": "Pinot Grigio",
-      "value": 123
+      "name": "Rh\u00f4ne-style White Blend",
+      "value": 101
     },
     {
       "name": "Pinot Gris",
       "value": 102
     },
     {
-      "name": "Pinot Meunier",
-      "value": 7
-    },
-    {
-      "name": "Pinot Noir",
-      "value": 3644
-    },
-    {
-      "name": "Pinot-Chardonnay",
-      "value": 4
-    },
-    {
-      "name": "Pinotage",
-      "value": 1
-    },
-    {
-      "name": "Port",
-      "value": 21
-    },
-    {
-      "name": "Primitivo",
-      "value": 58
-    },
-    {
-      "name": "Red Blend",
-      "value": 1044
-    },
-    {
-      "name": "Refosco",
-      "value": 1
-    },
-    {
-      "name": "Rh\u00f4ne-style Red Blend",
-      "value": 311
-    },
-    {
-      "name": "Rh\u00f4ne-style White Blend",
-      "value": 101
-    },
-    {
-      "name": "Ribolla Gialla",
-      "value": 1
+      "name": "Pinot Grigio",
+      "value": 123
     },
     {
       "name": "Riesling",
       "value": 124
     },
     {
-      "name": "Ros\u00e9",
-      "value": 312
-    },
-    {
-      "name": "Rosado",
-      "value": 1
-    },
-    {
-      "name": "Rosato",
-      "value": 2
-    },
-    {
-      "name": "Roussanne",
-      "value": 50
-    },
-    {
-      "name": "Roussanne-Marsanne",
-      "value": 1
-    },
-    {
-      "name": "Roussanne-Viognier",
-      "value": 8
-    },
-    {
-      "name": "S\u00e9millon",
-      "value": 23
-    },
-    {
-      "name": "Sagrantino",
-      "value": 2
+      "name": "Malbec",
+      "value": 125
     },
     {
       "name": "Sangiovese",
       "value": 137
     },
     {
-      "name": "Sangiovese Cabernet",
-      "value": 2
+      "name": "Barbera",
+      "value": 140
     },
     {
-      "name": "Sangiovese-Cabernet Sauvignon",
-      "value": 2
-    },
-    {
-      "name": "Sangiovese-Syrah",
-      "value": 2
-    },
-    {
-      "name": "Sauvignon Blanc",
-      "value": 912
-    },
-    {
-      "name": "Sauvignon Blanc-Semillon",
-      "value": 12
-    },
-    {
-      "name": "Sauvignon Gris",
-      "value": 1
-    },
-    {
-      "name": "Scheurebe",
-      "value": 1
-    },
-    {
-      "name": "Semillon-Sauvignon Blanc",
-      "value": 10
-    },
-    {
-      "name": "Sherry",
-      "value": 1
-    },
-    {
-      "name": "Shiraz",
-      "value": 6
-    },
-    {
-      "name": "Souzao",
-      "value": 1
-    },
-    {
-      "name": "Sparkling Blend",
-      "value": 227
-    },
-    {
-      "name": "Symphony",
-      "value": 1
-    },
-    {
-      "name": "Syrah",
-      "value": 908
-    },
-    {
-      "name": "Syrah-Cabernet",
-      "value": 2
-    },
-    {
-      "name": "Syrah-Cabernet Sauvignon",
-      "value": 15
-    },
-    {
-      "name": "Syrah-Grenache",
-      "value": 17
-    },
-    {
-      "name": "Syrah-Grenache-Viognier",
-      "value": 1
-    },
-    {
-      "name": "Syrah-Merlot",
-      "value": 1
-    },
-    {
-      "name": "Syrah-Mourv\u00e8dre",
-      "value": 4
-    },
-    {
-      "name": "Syrah-Petit Verdot",
-      "value": 1
-    },
-    {
-      "name": "Syrah-Petite Sirah",
-      "value": 7
-    },
-    {
-      "name": "Syrah-Tempranillo",
-      "value": 2
-    },
-    {
-      "name": "Syrah-Viognier",
-      "value": 3
-    },
-    {
-      "name": "Tannat",
-      "value": 27
-    },
-    {
-      "name": "Tannat-Syrah",
-      "value": 1
-    },
-    {
-      "name": "Tempranillo",
-      "value": 87
-    },
-    {
-      "name": "Tempranillo Blend",
-      "value": 5
-    },
-    {
-      "name": "Tempranillo-Cabernet Sauvignon",
-      "value": 1
-    },
-    {
-      "name": "Teroldego",
-      "value": 11
-    },
-    {
-      "name": "Tinta Madeira",
-      "value": 1
-    },
-    {
-      "name": "Tocai Friulano",
-      "value": 5
-    },
-    {
-      "name": "Torront\u00e9s",
-      "value": 3
-    },
-    {
-      "name": "Touriga Nacional",
-      "value": 6
-    },
-    {
-      "name": "Trousseau Gris",
-      "value": 1
-    },
-    {
-      "name": "Ugni Blanc",
-      "value": 3
-    },
-    {
-      "name": "Valdigui\u00e9",
-      "value": 4
-    },
-    {
-      "name": "Verdejo",
-      "value": 3
-    },
-    {
-      "name": "Verdelho",
-      "value": 15
-    },
-    {
-      "name": "Vermentino",
-      "value": 27
-    },
-    {
-      "name": "Viognier",
-      "value": 234
-    },
-    {
-      "name": "Viognier-Chardonnay",
-      "value": 2
-    },
-    {
-      "name": "Viognier-Grenache Blanc",
-      "value": 2
-    },
-    {
-      "name": "Viognier-Roussanne",
-      "value": 1
+      "name": "Cabernet Franc",
+      "value": 190
     },
     {
       "name": "White Blend",
       "value": 193
     },
     {
+      "name": "Sparkling Blend",
+      "value": 227
+    },
+    {
+      "name": "Viognier",
+      "value": 234
+    },
+    {
+      "name": "Grenache",
+      "value": 239
+    },
+    {
+      "name": "Rh\u00f4ne-style Red Blend",
+      "value": 311
+    },
+    {
+      "name": "Ros\u00e9",
+      "value": 312
+    },
+    {
+      "name": "Petite Sirah",
+      "value": 371
+    },
+    {
+      "name": "Bordeaux-style Red Blend",
+      "value": 372
+    },
+    {
+      "name": "Merlot",
+      "value": 502
+    },
+    {
+      "name": "Syrah",
+      "value": 908
+    },
+    {
+      "name": "Sauvignon Blanc",
+      "value": 912
+    },
+    {
+      "name": "Red Blend",
+      "value": 1044
+    },
+    {
       "name": "Zinfandel",
       "value": 1272
+    },
+    {
+      "name": "Cabernet Sauvignon",
+      "value": 2424
+    },
+    {
+      "name": "Chardonnay",
+      "value": 2469
+    },
+    {
+      "name": "Pinot Noir",
+      "value": 3644
     }
   ]
 }

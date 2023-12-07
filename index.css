@@ -7,8 +7,12 @@
     margin: 10px;
 }
 
-h1 {
-    text-align: center;
+h2 {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin: 0;
+    
 }
 
 #intro {
@@ -19,16 +23,17 @@ p {
     text-align: left;
 }
 
-#h3 {
-    text-align: center;
+h4 {
+    height: 30px;
+        line-height: 30px; 
+        text-align: center;
+        margin: 0;
 }
 
 .Box-container {
     display: flex;
     flex-direction: column;
-    /* Stack items vertically */
     align-items: flex-end;
-    /* Align items to the right */
 }
 
 .button-box {
@@ -38,7 +43,6 @@ p {
     border-radius: 10px;
     text-align: center;
     margin: 2px;
-    /* Adjust as needed for spacing */
 }
 
 .main-container {

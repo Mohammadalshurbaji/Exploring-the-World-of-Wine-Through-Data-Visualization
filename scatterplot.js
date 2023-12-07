@@ -1,6 +1,7 @@
-var scatterplotMargin = { top: 10, right: 30, bottom: 30, left: 50 },
-    scatterplotWidth = 600 - scatterplotMargin.left - scatterplotMargin.right,
-    scatterplotHeight = 250 - scatterplotMargin.top - scatterplotMargin.bottom;
+
+var scatterplotMargin = { top: 10, right: 10, bottom: 30, left: 50 },
+    scatterplotWidth = 1450 - scatterplotMargin.left - scatterplotMargin.right,
+    scatterplotHeight = 350 - scatterplotMargin.top - scatterplotMargin.bottom;
 
 var scatterplotXScale = d3.scaleLinear().range([0, scatterplotWidth]);
 var scatterplotYScale = d3.scaleLinear().range([scatterplotHeight, 0]);
@@ -15,21 +16,61 @@ var scatterplotSvg = d3.select("#scatterplot")
     .attr("height", scatterplotHeight + scatterplotMargin.top + scatterplotMargin.bottom)
     .append("g")
     .attr("transform", "translate(" + scatterplotMargin.left + "," + scatterplotMargin.top + ")");
+    scatterplotSvg.append("text")
+            .attr("class", "x label")
+            .attr("text-anchor", "middle")
+            .attr("x", scatterplotWidth / 2)
+            .attr("y", scatterplotHeight + scatterplotMargin.bottom)
+            .text("Price of Wines");
 
-function updateScatterPlot(selectedVariety) {
+        scatterplotSvg.append("text")
+            .attr("class", "y label")
+            .attr("text-anchor", "middle")
+            .attr("x", -scatterplotHeight / 2)
+            .attr("y", -30)
+            .attr("transform", "rotate(-90)")
+            .text("Points");
+
+        
+function updateScatterPlot(selectedVariety,selectedWinery) {
     d3.csv("Tableau_dataset.csv").then(function(data) {
-        var filteredData = selectedVariety === "All" ? data : data.filter(function(d) {
+        var filteredData1 = selectedVariety === "All" ? data : data.filter(function(d) {
             return d.variety === selectedVariety;
         });
-
-        scatterplotXScale.domain([0, d3.max(filteredData, function(d) { return +d.price; })]);
-        scatterplotYScale.domain([d3.min(filteredData, function(d) { return +d.points; }) - 3, d3.max(filteredData, function(d) { return +d.points; })]);
+        console.log("SC",selectedVariety)
+        console.log("SC",filteredData1.length)
+        scatterplotXScale.domain([0, d3.max(filteredData1, function(d) { return +d.price; })]);
+        scatterplotYScale.domain([d3.min(filteredData1, function(d) { return +d.points; }) - 3, d3.max(filteredData1, function(d) { return +d.points; })]);
 
         var dots = scatterplotSvg.selectAll("circle")
-            .data(filteredData);
-
-
-        dots.exit().remove();
+                        .data(filteredData1)
+                        .join("circle")
+                        .attr("r", function (d) {
+                            return d.winery === selectedWinery? 4  : 2; 
+                        })
+                        .style("fill", function (d) {
+                            return d.winery === selectedWinery ? "#003049" : "#457b9d";
+                            
+                        })
+                        .attr("cx", function(d) { return scatterplotXScale(d.price); })
+                        .attr("cy", function(d) { return scatterplotYScale(d.points); })
+                        .on("click", function(event, d) {
+                            updateBubbleChart(selectedVariety,d.winery);
+                            
+                        })
+                        .on("mouseover", function (event, d) {
+                            tooltip.html(`<strong>${d.winery}</strong>`)
+                                .style("visibility", "visible");
+                        })
+                        .on("mousemove", function (event) {
+                            tooltip.style("top", event.pageY - 10 + "px")
+                                .style("left", event.pageX + 10 + "px");
+                        })
+                        .on("mouseout", function () {
+                            tooltip.style("visibility", "hidden");
+                        });
+                        
+                        dots.exit().remove();
 
 
         dots.transition()
@@ -37,11 +78,17 @@ function updateScatterPlot(selectedVariety) {
             .attr("cx", function(d) { return scatterplotXScale(d.price); })
             .attr("cy", function(d) { return scatterplotYScale(d.points); });
 
-
+        
         dots.enter()
             .append("circle")
             .attr("r", 2)
-            .style("fill", "#BA2926")
+            /*.attr("r", function (d) {
+                return d.winery === selectedWinery? 4 : 2; 
+            })
+            .style("fill", function (d) {
+                return d.winery === selectedWinery ? "blue" : "#BA2926";
+                
+            })*/
             .attr("cx", function(d) { return scatterplotXScale(d.price); })
             .attr("cy", function(d) { return scatterplotYScale(d.points); })
             .append('title')
@@ -52,7 +99,7 @@ function updateScatterPlot(selectedVariety) {
             .delay(function(d, i) { return i * 50; })
             .attr("opacity", 1);
 
-
+        
         scatterplotSvg.selectAll(".axis").remove();
 
         scatterplotSvg.append("g")
@@ -80,22 +127,9 @@ function updateScatterPlot(selectedVariety) {
             .duration(1000)
             .attr("x", -scatterplotHeight / 2)
             .attr("y", -30);
-        scatterplotSvg.append("text")
-            .attr("class", "x label")
-            .attr("text-anchor", "middle")
-            .attr("x", scatterplotWidth / 2)
-            .attr("y", scatterplotHeight + scatterplotMargin.bottom)
-            //.text("Price of Wines");
-
-        scatterplotSvg.append("text")
-            .attr("class", "y label")
-            .attr("text-anchor", "middle")
-            .attr("x", -scatterplotHeight / 2)
-            .attr("y", -30)
-            .attr("transform", "rotate(-90)")
-            .text("Points");
+        
     });
 
 }
 
-updateScatterPlot("All");
+updateScatterPlot("All","All");
