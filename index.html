@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+    <title>Variety TreeMap</title>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    
+</head>
+<h2 height = 50px; line-height: 50px;margin: 0>Wine Reviews Along the California State</h2>
+<!-- <p class="intro">
+    In this website, a list of the main comparison factors that shows the difference between wine varieties in producing wine along California will be visualized in detail.
+    <br />
+</p> -->
+
+<div class="main-container">
+    <div class="main-container2">
+        <div class="chart-container">
+            <div>
+
+                <h4 id="h3">Varieties of Wines </h4>
+                <div id="legend"></div>
+                <svg id="treemap" height="300" width="900"></svg>
+                <rect class="rect1" x="5" y="5" width="900" height="350" fill="black"></rect>
+                <script src="treemap.js"></script>
+
+
+            </div>
+            <div >
+                <h4>Number of Wines per Each Winery</h4>
+                <div id="bubblechart" width=300 height=300 ></div>
+                <script src="bubble_chart.js"></script>
+            </div>
+        </div>
+        <div class="chart-container">
+        <div>
+            <h4 id="prices"> Prices VS. Points</h4>
+            <svg id="scatterplot"></svg>
+            <script src="scatterplot.js"></script>
+
+         </div>
+         
+    </div>
+    
+</div>
+
+</div>
+
+<body>
+
+</body>
+
+</html>
