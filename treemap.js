@@ -36,7 +36,7 @@ const drawTreeMap = (dataset) => {
         .attr("width", d => d.x1 - d.x0)
         .attr("height", d => d.y1 - d.y0)
         .attr("fill", d => colorScale(d.data.value))
-        .attr("stroke", "#fff")
+        .attr("stroke", "black")
         .on("click", function (event, d) {
             const originalWidth = d.x1 - d.x0;
             const originalHeight = d.y1 - d.y0;

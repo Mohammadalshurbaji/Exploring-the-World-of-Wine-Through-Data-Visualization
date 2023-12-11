@@ -21,7 +21,8 @@ var tooltip = d3.select("#bubblechart")
     .style("border", "solid")
     .style("border-width", "1px")
     .style("border-radius", "5px")
-    .style("padding", "10px");
+    .style("padding", "10px")
+    .style("max-width", "15ch");
 var demosv="All"
 
 function updateBubbleChart(selectedVariety, selectedwinery) {
@@ -53,6 +54,7 @@ function updateBubbleChart(selectedVariety, selectedwinery) {
             .on("mouseover", function (event, d) {
                 console.log("bubble_chart mouse over",d)
                 tooltip.html(`<strong>${d.data.winery}</strong>: ${d.data.count} wines`)
+                
                     .style("visibility", "visible");
             })
             .on("mousemove", function (event) {
@@ -71,7 +73,7 @@ function updateBubbleChart(selectedVariety, selectedwinery) {
             .attr("cy", d => d.y)
             .attr("r", d => d.r)
             .attr("fill", function (d) {
-                return d.data.winery === selectedwinery ? "#001d3d" : "#669bbc";
+                return d.data.winery === selectedwinery ? "#ef233c" : "#073B4C";
             })
             ;
 
