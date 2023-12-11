@@ -80,7 +80,7 @@ function updateScatterPlot(selectedVariety, selectedWinery) {
                 return d.winery === selectedWinery ? 5 : 2;
             })
             .style("fill", function (d) {
-                return d.winery === selectedWinery ? "#EF476F" : "#073B4C";
+                return d.winery === selectedWinery ? "#fb8500" : "#073B4C";
             })
             .attr("cx", function (d) { return scatterplotXScale(d.price); })
             .attr("cy", function (d) { return scatterplotYScale(d.points); })
