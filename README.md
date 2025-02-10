@@ -1,4 +1,4 @@
-# **Uncorking Insights: Exploring Wine Reviews in California** 🍷📊  
+# **Uncorking Insights: Exploring Wine Reviews in California**   
 
 ## **Project Overview**  
 This project was developed as part of our **Data Visualization** class to explore the vast world of wine reviews through interactive data storytelling. Using **D3.js** and **Tableau**, we created an interactive website to analyze **wine varieties, pricing trends, ratings, and winery distributions** - all centered around **California’s wine industry**.  
